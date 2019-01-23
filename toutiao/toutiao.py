@@ -105,7 +105,7 @@ def save_image(html):
     file_path = '{}/{}.{}'.format(os.getcwd(), md5(html).hexdigest(), 'jpg')
     print(file_path)
     if not os.path.exists(file_path):
-        with open(file_path, 'wb') as f:
+        with open(file_path, 'w') as f:
             f.write(html)
             f.close()
 
